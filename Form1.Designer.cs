@@ -63,6 +63,7 @@
             btnGare.TabIndex = 2;
             btnGare.Text = " Elenco Gare";
             btnGare.UseVisualStyleBackColor = true;
+            btnGare.Click += btnGare_Click;
             // 
             // comboBox1
             // 
