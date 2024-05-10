@@ -28,80 +28,82 @@
         /// </summary>
         private void InitializeComponent()
         {
-            dataGridView1 = new DataGridView();
-            button1 = new Button();
-            button2 = new Button();
+            dgvGriglia = new DataGridView();
+            btnElencaIta = new Button();
+            btnGare = new Button();
             comboBox1 = new ComboBox();
-            button3 = new Button();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            btnConferma = new Button();
+            ((System.ComponentModel.ISupportInitialize)dgvGriglia).BeginInit();
             SuspendLayout();
             // 
-            // dataGridView1
+            // dgvGriglia
             // 
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(184, 177);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.RowHeadersWidth = 51;
-            dataGridView1.Size = new Size(1030, 309);
-            dataGridView1.TabIndex = 0;
+            dgvGriglia.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvGriglia.Location = new Point(184, 177);
+            dgvGriglia.Name = "dgvGriglia";
+            dgvGriglia.RowHeadersWidth = 51;
+            dgvGriglia.Size = new Size(1030, 309);
+            dgvGriglia.TabIndex = 0;
             // 
-            // button1
+            // btnElencaIta
             // 
-            button1.Location = new Point(184, 101);
-            button1.Name = "button1";
-            button1.Size = new Size(279, 70);
-            button1.TabIndex = 1;
-            button1.Text = "button1";
-            button1.UseVisualStyleBackColor = true;
+            btnElencaIta.Location = new Point(184, 101);
+            btnElencaIta.Name = "btnElencaIta";
+            btnElencaIta.Size = new Size(279, 70);
+            btnElencaIta.TabIndex = 1;
+            btnElencaIta.Text = " Elenco Piloti ";
+            btnElencaIta.UseVisualStyleBackColor = true;
+            btnElencaIta.Click += btnElencaIta_Click;
             // 
-            // button2
+            // btnGare
             // 
-            button2.Location = new Point(558, 101);
-            button2.Name = "button2";
-            button2.Size = new Size(279, 70);
-            button2.TabIndex = 2;
-            button2.Text = "button2";
-            button2.UseVisualStyleBackColor = true;
+            btnGare.Location = new Point(558, 101);
+            btnGare.Name = "btnGare";
+            btnGare.Size = new Size(279, 70);
+            btnGare.TabIndex = 2;
+            btnGare.Text = " Elenco Gare";
+            btnGare.UseVisualStyleBackColor = true;
             // 
             // comboBox1
             // 
             comboBox1.FormattingEnabled = true;
+            comboBox1.Items.AddRange(new object[] { "Elenco squadre non italiane ordinate per nome", "Elenco piloti Ducati ordinati per cognome e nome", "Elenco circuiti ordinati per nome" });
             comboBox1.Location = new Point(924, 101);
             comboBox1.Name = "comboBox1";
             comboBox1.Size = new Size(234, 28);
             comboBox1.TabIndex = 3;
             // 
-            // button3
+            // btnConferma
             // 
-            button3.Location = new Point(924, 142);
-            button3.Name = "button3";
-            button3.Size = new Size(234, 29);
-            button3.TabIndex = 4;
-            button3.Text = "button3";
-            button3.UseVisualStyleBackColor = true;
+            btnConferma.Location = new Point(924, 142);
+            btnConferma.Name = "btnConferma";
+            btnConferma.Size = new Size(234, 29);
+            btnConferma.TabIndex = 4;
+            btnConferma.Text = "Conferma";
+            btnConferma.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1390, 533);
-            Controls.Add(button3);
+            Controls.Add(btnConferma);
             Controls.Add(comboBox1);
-            Controls.Add(button2);
-            Controls.Add(button1);
-            Controls.Add(dataGridView1);
+            Controls.Add(btnGare);
+            Controls.Add(btnElencaIta);
+            Controls.Add(dgvGriglia);
             Name = "Form1";
             Text = "Form1";
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dgvGriglia).EndInit();
             ResumeLayout(false);
         }
 
         #endregion
 
-        private DataGridView dataGridView1;
-        private Button button1;
-        private Button button2;
+        private DataGridView dgvGriglia;
+        private Button btnElencaIta;
+        private Button btnGare;
         private ComboBox comboBox1;
-        private Button button3;
+        private Button btnConferma;
     }
 }
