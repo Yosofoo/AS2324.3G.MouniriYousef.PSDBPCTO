@@ -71,14 +71,14 @@
             cmbScelta.Items.AddRange(new object[] { "Elenco squadre non italiane ordinate per nome", "Elenco piloti Ducati ordinati per cognome e nome", "Elenco circuiti ordinati per nome" });
             cmbScelta.Location = new Point(924, 101);
             cmbScelta.Name = "cmbScelta";
-            cmbScelta.Size = new Size(234, 28);
+            cmbScelta.Size = new Size(290, 28);
             cmbScelta.TabIndex = 3;
             // 
             // btnConferma
             // 
             btnConferma.Location = new Point(924, 142);
             btnConferma.Name = "btnConferma";
-            btnConferma.Size = new Size(234, 29);
+            btnConferma.Size = new Size(290, 29);
             btnConferma.TabIndex = 4;
             btnConferma.Text = "Conferma";
             btnConferma.UseVisualStyleBackColor = true;

@@ -45,9 +45,11 @@ namespace AS2324._3G.MouniriYousef.PSDBPCTO
 
             DataTable dtDati = new DataTable();
 
-            query = "SELECT Circuiti.nome, Gare.data, Gare.Punteggio FROM Gare " +
+            query = "SELECT Circuiti.nome, Gare.data, Piloti.cognome, Gare.Punteggio FROM Gare " +
                 "INNER JOIN Circuiti ON Circuiti.IdCircuiti = Gare.idCircuiti " +
+                "INNER JOIN Piloti ON Piloti.IdPiloti = Gare.IdPiloti " +
                 "ORDER BY Gare.punteggio DESC";
+
 
             SQLiteDataAdapter da = new SQLiteDataAdapter(query, strConnessione);
 
