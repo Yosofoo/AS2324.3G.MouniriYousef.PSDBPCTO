@@ -80,6 +80,11 @@ namespace AS2324._3G.MouniriYousef.PSDBPCTO
                 case "Elenco piloti Ducati ordinati per cognome e nome":
                     query = "SELECT Piloti.nome, Piloti.cognome FROM Piloti WHERE Piloti.IdSquadre=30 ORDER BY Piloti.nome, Piloti.cognome";
                     break;
+                case "Elenco circuiti ordinati per nome":
+                    query = "SELECT Circuiti.nome FROM Circuiti ORDER BY Circuiti.nome";
+                    break;
+                default:
+                    break;
             }
 
             SQLiteDataAdapter da = new SQLiteDataAdapter(query, strConnessione);
