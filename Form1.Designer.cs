@@ -31,7 +31,7 @@
             dgvGriglia = new DataGridView();
             btnElencaIta = new Button();
             btnGare = new Button();
-            comboBox1 = new ComboBox();
+            cmbScelta = new ComboBox();
             btnConferma = new Button();
             ((System.ComponentModel.ISupportInitialize)dgvGriglia).BeginInit();
             SuspendLayout();
@@ -65,14 +65,14 @@
             btnGare.UseVisualStyleBackColor = true;
             btnGare.Click += btnGare_Click;
             // 
-            // comboBox1
+            // cmbScelta
             // 
-            comboBox1.FormattingEnabled = true;
-            comboBox1.Items.AddRange(new object[] { "Elenco squadre non italiane ordinate per nome", "Elenco piloti Ducati ordinati per cognome e nome", "Elenco circuiti ordinati per nome" });
-            comboBox1.Location = new Point(924, 101);
-            comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(234, 28);
-            comboBox1.TabIndex = 3;
+            cmbScelta.FormattingEnabled = true;
+            cmbScelta.Items.AddRange(new object[] { "Elenco squadre non italiane ordinate per nome", "Elenco piloti Ducati ordinati per cognome e nome", "Elenco circuiti ordinati per nome" });
+            cmbScelta.Location = new Point(924, 101);
+            cmbScelta.Name = "cmbScelta";
+            cmbScelta.Size = new Size(234, 28);
+            cmbScelta.TabIndex = 3;
             // 
             // btnConferma
             // 
@@ -82,6 +82,7 @@
             btnConferma.TabIndex = 4;
             btnConferma.Text = "Conferma";
             btnConferma.UseVisualStyleBackColor = true;
+            btnConferma.Click += btnConferma_Click;
             // 
             // Form1
             // 
@@ -89,7 +90,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1390, 533);
             Controls.Add(btnConferma);
-            Controls.Add(comboBox1);
+            Controls.Add(cmbScelta);
             Controls.Add(btnGare);
             Controls.Add(btnElencaIta);
             Controls.Add(dgvGriglia);
@@ -104,7 +105,7 @@
         private DataGridView dgvGriglia;
         private Button btnElencaIta;
         private Button btnGare;
-        private ComboBox comboBox1;
+        private ComboBox cmbScelta;
         private Button btnConferma;
     }
 }

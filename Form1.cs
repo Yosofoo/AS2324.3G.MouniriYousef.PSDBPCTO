@@ -62,5 +62,38 @@ namespace AS2324._3G.MouniriYousef.PSDBPCTO
                 MessageBox.Show(ex.Message);
             }
         }
+
+        private void btnConferma_Click(object sender, EventArgs e)
+        {
+            string query = "";
+            string strConnessione = "";
+
+            strConnessione = "Data Source=" + @"C:\Users\mouni\Desktop\c#\Windows Form\awasdada\DB\MotoGP.db" + ";Version=3;";
+
+            DataTable dtDati = new DataTable();
+
+            switch (cmbScelta.Text)
+            {
+                case "Elenco squadre non italiane ordinate per nome":
+                    query = "SELECT Squadre.nome FROM Squadre WHERE Squadre.nazionalita<>'ITA' ORDER BY Squadre.nome";
+                    break;
+                case "Elenco piloti Ducati ordinati per cognome e nome":
+                    query = "SELECT Piloti.nome, Piloti.cognome FROM Piloti WHERE Piloti.IdSquadre=30 ORDER BY Piloti.nome, Piloti.cognome";
+                    break;
+            }
+
+            SQLiteDataAdapter da = new SQLiteDataAdapter(query, strConnessione);
+
+            try
+            {
+                da.Fill(dtDati);
+
+                dgvGriglia.DataSource = dtDati;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
     }
 }
